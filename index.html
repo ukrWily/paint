@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Paint</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="paint-app">
+        <canvas class="paint-app__painting" id="canvas"></canvas>
+        <div class="paint-app__controls">
+          <div class="btns">
+            <button class="btn btn-fill">Filling</button>
+            <div class="thin-line">
+              <label for="range">Thin of line</label>
+              <input type="range" name="range" id="range" min="0.1" max="5.0" value="2.5" step="0.1">
+            </div>
+            <button class="btn btn-save">Save</button>
+          </div>
+          <div class="colors">
+            <div class="color" data-color="black"></div>
+            <div class="color" data-color="white"></div>
+            <div class="color" data-color="red"></div>
+            <div class="color" data-color="brown"></div>
+            <div class="color" data-color="yellow"></div>
+            <div class="color" data-color="green"></div>
+            <div class="color" data-color="rgba(0, 0, 255, 0.5)"></div>
+            <div class="color" data-color="darkblue"></div>
+            <div class="color" data-color="rgba(133, 23, 161, 0.88)"></div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
