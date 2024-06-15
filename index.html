@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,regular,500,600,700" rel="stylesheet" />
   <title>Paint</title>
 </head>
 <body>
@@ -15,6 +16,7 @@
             <button class="btn btn-fill">Filling</button>
             <div class="thin-line">
               <label for="range">Thin of line - 2.5px</label>
+              <div class="range-line"></div>
               <input type="range" name="range" id="range" min="1" max="5.0" value="2.5" step="0.5" list="markers"/>
               <datalist id="markers">
                 <option value="1" label="1"></option>
@@ -31,7 +33,7 @@
             <button class="btn btn-save">Save</button>
           </div>
           <div class="colors">
-            <div class="color" data-color="rgba(0, 0, 0, 1)"></div>
+            <div class="color" data-color="rgba(44, 44, 44, 1)"></div>
             <div class="color" data-color="rgba(255, 255, 255, 1)"></div>
             <div class="color" data-color="rgba(255, 0, 0, 1)"></div>
             <div class="color" data-color="rgba(165, 42, 42, 1)"></div>

@@ -1,5 +1,4 @@
 
-
 html, body{
   min-height: 100%;
   max-width: 100%;
@@ -11,6 +10,7 @@ html, body{
   max-width: 1200px;
   min-height: 100%;
   margin: 50px auto;
+  font-family: 'Comfortaa';
   }
   .paint-app{
   background-color: rgba(250, 235, 215, 1);
@@ -51,20 +51,26 @@ html, body{
   border-radius: 10px;
   transition: all .2s;
   cursor: pointer;
+  font-family: 'Comfortaa';
   &:hover{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     background-color:rgba(0, 250, 154, 0.2);
-    /* font-weight: 700; */
+    font-weight: 700;
   }
   &:active{
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
   }
 }
 .btn-fill {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  text-align: center;
 }
 .btn-save {
 }
 .thin-line{
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -78,9 +84,18 @@ html, body{
     cursor: pointer;
   }
 }
-/* .thin-line > input{
-  width: 300px;
-} */
+.thin-line > label{
+
+}
+.range-line{
+  display: inline-block;
+  width: 50px;
+  height: 2.5px;
+  background-color: #000000;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
 datalist {
   display: flex;
   /* flex-direction: column; */

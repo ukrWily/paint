@@ -6,12 +6,26 @@ window.addEventListener("DOMContentLoaded", () => {
   const thin = document.querySelector(".thin-line > input");
   thin.addEventListener("change", () => {
     const line = thin.value;
+    document.querySelector(".range-line").style.height = `${line}px`;
     document.querySelector(
       ".thin-line > label"
     ).textContent = `Thin of line - ${line}px`;
   });
 
   const canvas = document.querySelector("#canvas");
+  /**
+   * get canvas context
+   */
+  const ctx = canvas.getContext("2d");
+  /**
+   * set thin of line
+   * */
+  ctx.lineWidth = 2.5;
+  /**
+   * set color of line
+   */
+  ctx.strokeStyle = "#2c2c2c";
+
   let painting = false;
 
   function stopPainting() {
