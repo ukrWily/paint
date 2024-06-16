@@ -4,6 +4,7 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   const thin = document.querySelector(".thin-line > input");
+
   thin.addEventListener("change", () => {
     const line = thin.value;
     document.querySelector(".range-line").style.height = `${line}px`;
