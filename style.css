@@ -7,7 +7,7 @@ html, body{
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1000px;
   min-height: 100%;
   margin: 50px auto;
   font-family: 'Comfortaa';
@@ -18,14 +18,14 @@ html, body{
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 25px;
+  padding: 35px 10px;
   border-radius: 25px;
   border: 1px solid rgba(0, 0, 0, 0.582);
 	}
 
 .paint-app__painting {
-  width: 900px;
-  min-height: 1000px;
+  width: 700px;
+  height: 700px;
   background-color: white;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
@@ -69,6 +69,13 @@ html, body{
 }
 .btn-save {
 }
+.btn-clear{
+  padding: 5px;
+  &:hover{
+    background-color:crimson;
+    color: #fff;
+  }
+}
 .thin-line{
   position: relative;
   display: flex;
@@ -106,6 +113,7 @@ datalist {
 
 option {
   padding: 0;
+    font-size: 10px;
 }
 
 input[type="range"] {
