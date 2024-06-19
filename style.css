@@ -53,27 +53,31 @@ html, body{
   cursor: pointer;
   font-family: 'Comfortaa';
   &:hover{
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-    background-color:rgba(0, 250, 154, 0.2);
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.5);
+    /* background-color:rgba(0, 250, 154, 0.2); */
     font-weight: 700;
   }
   &:active{
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   }
 }
-.btn-fill {
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
+.btn-mode {
+  width: 125px;
+  height: 55px;
+  border-radius: 25%;
   text-align: center;
+  color: #ffffff;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
+  font-size: 20px;
+  font-weight: 700;
 }
 .btn-save {
 }
 .btn-clear{
   padding: 5px;
+  background-color:crimson;
+  color: #fff;
   &:hover{
-    background-color:crimson;
-    color: #fff;
   }
 }
 .thin-line{
@@ -92,7 +96,7 @@ html, body{
   }
 }
 .thin-line > label{
-
+  margin-right: 25px;
 }
 .range-line{
   display: inline-block;
@@ -137,5 +141,86 @@ input[type="range"] {
     transform: scale(1.1);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
 
+  }
+}
+.mode{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+.mode-label{
+  color: #000;
+  font-weight: 700;
+}
+.oval{
+  animation: oval 2s forwards;
+}
+.rectangle{
+  animation: rectangle 2s forwards;
+}
+/* ================================================== */
+@keyframes oval {
+  0%{
+    border-radius: 25% 25% 25% 25%;
+  }
+  30%{
+    border-radius: 0% 0% 0% 0%;
+  }
+  100%{
+    border-radius: 50% 50% 50% 50%;
+  }
+  /* 20%{
+    border-radius: 25% 25% 25% 0%;
+  }
+  25%{
+    border-radius: 25% 25% 25% 50%;
+  }
+  45%{
+    border-radius: 25% 25% 0% 50%;
+  }
+  50%{
+    border-radius: 25% 25% 50% 50%;
+  }
+  70%{
+    border-radius: 25% 0% 50% 50%;
+  }
+  75%{
+    border-radius: 25% 50% 50% 50%;
+  }
+  95%{
+    border-radius: 0% 50% 50% 50%;
+  }
+  100%{
+    border-radius: 50% 50% 50% 50%;
+  } */
+}
+@keyframes rectangle {
+  0%{
+    border-radius: 50% 50% 50% 50%;
+  }
+  20%{
+        border-radius: 0% 50% 50% 50%;
+  }
+  25%{
+        border-radius: 25% 50% 50% 50%;
+  }
+  45%{
+        border-radius: 25% 0% 50% 50%;  
+      }
+  50%{
+    border-radius: 25% 25% 50% 50%;
+  }
+  70%{
+        border-radius: 25% 25% 0% 50%;
+  }
+  75%{
+        border-radius: 25% 25% 25% 50%;
+  }
+  95%{
+        border-radius: 25% 25% 25% 0%;
+  }
+  100%{
+        border-radius: 25% 25% 25% 25%;
   }
 }

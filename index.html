@@ -13,11 +13,14 @@
         <canvas class="paint-app__painting" id="canvas"></canvas>
         <div class="paint-app__controls">
           <div class="btns">
-            <button class="btn btn-fill">Filling</button>
+            <div class="mode">
+              <label class="mode-label" for="mode">Filling <-> Drawing</label>
+            <button class="btn btn-mode" id="mode">Filling</button>
+            </div>
             <div class="thin-line">
-              <label for="range">Thin of line - 2.5px</label>
+              <label for="range">Line thickness - 2.5px</label>
               <div class="range-line"></div>
-              <input type="range" name="range" id="range" min="1" max="7.0" value="2.5" step="0.5" list="markers"/>
+              <input type="range" name="range" id="range" min="1" max="7.0" value="2.5" step="0.1" list="markers"/>
               <datalist id="markers">
                 <option value="1" label="1,0"></option>
                 <option value="1.5" label="1,5"></option>
