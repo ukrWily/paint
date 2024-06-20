@@ -61,13 +61,25 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   function fillingCanvas() {
-    ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
+    if (filling) {
+      ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
+    }
+  }
+
+  function saveCanvas() {
+    const image = canvas.toDataURL("image/png");
+    const link = document.createElement("a");
+    link.href = image;
+    link.download = "Painting from Paint";
+    link.click();
   }
 
   //<{<{<{<{<{<{<{<{<{<{<{<{<{<{<{<{<{<{<{<{<{<{<{<{<>}>}>}>}>}>}>}>}>}>}>}>}>}>}>}>}>}>}>}>}>}>}>}>}>
   const canvas = document.querySelector("#canvas");
   const rangeLine = document.querySelector(".range-line");
   const mode = document.querySelector(".btn-mode");
+  const save = document.querySelector(".btn-save");
+
   const INITIAL_COLOR = "#2c2c2c";
   const CANVAS_SIZE = 700;
   /**
@@ -77,6 +89,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
   canvas.width = CANVAS_SIZE;
   canvas.height = CANVAS_SIZE;
+  ctx.fillStyle = "#ffffff";
+  ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
   /**
    * set thin of line
    * */
@@ -119,4 +133,5 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   mode.addEventListener("click", handleMode);
+  save.addEventListener("click", saveCanvas);
 });
